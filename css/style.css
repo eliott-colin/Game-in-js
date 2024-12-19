@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Monoton", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+body {
+  background-color: #000943;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+#score {
+  width: 50%;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+.case {
+  /* https://texturehaven.com/tex/?t=brick_4
+	https://jeux.developpez.com/medias/
+	*/
+
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.way {
+  background-size: cover;
+}
+
+.case img {
+  margin: auto;
+}
+
+.active {
+  display: flex;
+}
+
+.fl-score {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  font-size: 2em;
+}
+
+/* OVERLAY */
+#replay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#replay h2 {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#content_replay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content_replay button {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* VERSION 1 */
+
+/*
+.case {
+  background: url("../images/caisse.png") no-repeat;
+}
+.way {
+  background: url("../images/terre.png") no-repeat;
+}
+*/
+
+/* VERSION 2 */
+
+.case {
+  border: 1px dotted white;
+}
+.case.visited {
+  background: url("../images/caisse.png") no-repeat;
+}
+.way.visited {
+  background: url("../images/terre.png") no-repeat;
+}
+
+.start,
+.finish {
+  background: url("../images/glace.png") no-repeat;
+  background-size: cover;
+}

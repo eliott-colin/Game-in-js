@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projet Fil Rouge</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <h1>RUN RUN RUN</h1>
+    <section id="score">
+      <div class="fl-score">
+        <div>Nombre de coups</div>
+        <div id="nbrCoups">0</div>
+      </div>
+      <div class="fl-score">
+        <div>Temps</div>
+        <div>
+          <span id="temps">0</span>
+
+          <i>&nbsp;s</i>
+        </div>
+      </div>
+    </section>
+    <section id="game"></section>
+    <section id="overlay">
+      <div id="replay">
+        <div id="content_replay">
+          <h2>VOTRE SCORE</h2>
+          <div class="fl-score">
+            <span>Nombre de coups total</span>
+            <span id="nbrCoupsTotal"></span>
+          </div>
+          <div class="fl-score">
+            <span>Temps</span>
+            <span id="tempsTotal"></span>
+          </div>
+          <button type="button" class="btn">REPLAY</button>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
