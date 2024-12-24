@@ -11,7 +11,7 @@ let tab1 = [[0,0,0],
             [0,0,0],
             [0,0,0]]
 let startY = Math.max(tab1.length-1)
-let startX = startY % 2 
+let startX = startY % 2 + 1
 console.log(startY)
 console.log(startX)
 let depart = [startX,startY]
@@ -24,22 +24,32 @@ function parcours(depart,fin){
     console.log('saes')
     let [x,y] = depart
     let tabvisited = [...tab1]
-    
+    let newx = ""
+    let newy = ""
     while(x != finX || y != finY){
-        console.log(x)
-        console.log(y)
-        console.log(tabvisited)
-        tabvisited[y][x] = 1
-        console.log(tabvisited[y][x])
+        // console.log(x)
+        // console.log(y)
+        // console.log(tabvisited)
+        // console.log(tabvisited[y][x])
+        
         let etst = true
         do {
-            let newx,newy = direction(x,y)
-            if ((newx > finX || newx < 0) &&( newy > finY || newy < 0) )
+            tabvisited[y][x] = 1
+            //CA MARCHE PAS ICI A CAUSE DU NEWX ET DU NEWY EN GROS NEWX PRENDS LA VALEUR "0 2" ET DCP NEWY ET UNDEFINED 
+            console.log(direction(x,y))
+            console.log("sssalut")
+            [newx,newy] = direction(x,y)
+            console.log(newx)
+            console.log(newy)
+            if ((newx > finX || newx < 0) &&( newy > finY || newy < 0) ){
+                etst = true
+            }
             if (tabvisited[newx][newy] != 1) {
-                etst = false
+                etst = true
+                
             }
         } while (etst);
-         
+        console.log(x,y)
     }
 }
 
@@ -61,7 +71,7 @@ function direction(x,y) {
         default:
             break;
     }
-    return x,y
+    console.log(x,y)
 }
 
 parcours(depart,fin)
