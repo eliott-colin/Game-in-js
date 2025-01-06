@@ -89,7 +89,7 @@ function parcours(depart, fin) {
         tabvisited[y][x] = 1; // Marquer comme visité
 
         let moved = false;
-        for (let i = 0; i < 4; i++) { // Tenter jusqu'à 4 directions
+        for (let i = 0; i < 4; i++) { // Tenter jusqu'à 4 directions style +1 -1 +1 -1 gg
             let [newx, newy] = direction(x, y);
             if (newx >= 0 && newx < tab1[0].length && newy >= 0 && newy < tab1.length && tabvisited[newy][newx] !== 1) {
                 [x, y] = [newx, newy];
@@ -120,6 +120,7 @@ function direction(x, y) {
 
 // Test
 parcours([1, 2], [2, 2]);
+console.log(tab1)
 
 //Test de la fonction direction inutile 
 // let [valeur1,valeur2] = direction(1,1)
